@@ -1,4 +1,5 @@
 package net.javaguides.springboot.controller;
+
 import org.springframework.beans.factory.annotation.Autowired;
 //import java.util.List;
 import org.springframework.stereotype.Controller;
@@ -17,7 +18,7 @@ public class EmployeeController {
 	//display list of employees
 	@GetMapping("/")
 	public String viewHomePage(Model model) {
-		model.addAttribute("listEmployees",employeService.getAllEmployees() );
+		model.addAttribute("listEmployees",employeService.getAllEmployees());
 		return "index";
 	}
 
